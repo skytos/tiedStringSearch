@@ -3,7 +3,7 @@ function* makeConnectedString(strings) {
   let stringIndex = 0
   let posInString = 0
   let starts = [0]
-  while (stringIndex < strings.length - 1 || posInString < strings[stringIndex].length) {
+  while (stringIndex < strings.length - 1 || stringIndex < strings.length && posInString < strings[stringIndex].length) {
     if (posInString === strings[stringIndex].length) {
       posInString = 0
       stringIndex++
